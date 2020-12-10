@@ -1,3 +1,274 @@
 {
-    "name": "test"
+  "name": "cs",
+  "children": [
+    {
+      "name": "2017",
+      "children": [
+        {
+          "name": "caesar.c"
+        },
+        {
+          "name": "fifteen.c"
+        },
+        {
+          "name": "find",
+          "children": [
+            {
+              "name": "find.c"
+            },
+            {
+              "name": "generate.c"
+            },
+            {
+              "name": "helpers.c"
+            },
+            {
+              "name": "helpers.h"
+            },
+            {
+              "name": "Makefile"
+            }
+          ]
+        },
+        {
+          "name": "greedy.c"
+        },
+        {
+          "name": "hello.c"
+        },
+        {
+          "name": "initials.c"
+        },
+        {
+          "name": "mario.c"
+        },
+        {
+          "name": "vigenere.c"
+        },
+        {
+          "name": "water.c"
+        }
+      ]
+    },
+    {
+      "name": "cash.c"
+    },
+    {
+      "name": "finance",
+      "children": [
+        {
+          "name": "application.py"
+        },
+        {
+          "name": "db_setup.sql"
+        },
+        {
+          "name": "finance.db"
+        },
+        {
+          "name": "helpers.py"
+        },
+        {
+          "name": "requirements.txt"
+        },
+        {
+          "name": "static",
+          "children": [
+            {
+              "name": "styles.css"
+            }
+          ]
+        },
+        {
+          "name": "templates",
+          "children": [
+            {
+              "name": "apology.html"
+            },
+            {
+              "name": "buy.html"
+            },
+            {
+              "name": "history.html"
+            },
+            {
+              "name": "index.html"
+            },
+            {
+              "name": "layout.html"
+            },
+            {
+              "name": "login.html"
+            },
+            {
+              "name": "quote.html"
+            },
+            {
+              "name": "register.html"
+            },
+            {
+              "name": "sell.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "hello.c"
+    },
+    {
+      "name": "license"
+    },
+    {
+      "name": "mario.c"
+    },
+    {
+      "name": "mashup",
+      "children": [
+        {
+          "name": "api_key.txt"
+        },
+        {
+          "name": "application.py"
+        },
+        {
+          "name": "db_setup.sql"
+        },
+        {
+          "name": "helpers.py"
+        },
+        {
+          "name": "mashup.db"
+        },
+        {
+          "name": "readme.txt"
+        },
+        {
+          "name": "requirements.txt"
+        },
+        {
+          "name": "static",
+          "children": [
+            {
+              "name": "ajax-loader.gif"
+            },
+            {
+              "name": "scripts.js"
+            },
+            {
+              "name": "styles.css"
+            }
+          ]
+        },
+        {
+          "name": "templates",
+          "children": [
+            {
+              "name": "index.html"
+            }
+          ]
+        },
+        {
+          "name": "US.txt"
+        }
+      ]
+    },
+    {
+      "name": "readme.md"
+    },
+    {
+      "name": "recover.c"
+    },
+    {
+      "name": "resize.c"
+    },
+    {
+      "name": "sentimental",
+      "children": [
+        {
+          "name": "caesar.py"
+        },
+        {
+          "name": "cash.py"
+        },
+        {
+          "name": "credit.py"
+        },
+        {
+          "name": "hello.py"
+        },
+        {
+          "name": "mario_less.py"
+        },
+        {
+          "name": "mario_more.py"
+        },
+        {
+          "name": "vigenere.py"
+        }
+      ]
+    },
+    {
+      "name": "similarities",
+      "children": [
+        {
+          "name": "helpers.py"
+        },
+        {
+          "name": "requirements.txt"
+        },
+        {
+          "name": "static",
+          "children": [
+            {
+              "name": "styles.css"
+            }
+          ]
+        },
+        {
+          "name": "templates",
+          "children": [
+            {
+              "name": "compare.html"
+            },
+            {
+              "name": "error.html"
+            },
+            {
+              "name": "index.html"
+            },
+            {
+              "name": "layout.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "speller",
+      "children": [
+        {
+          "name": "dictionary.c"
+        },
+        {
+          "name": "dictionary.h"
+        },
+        {
+          "name": "Makefile"
+        },
+        {
+          "name": "README.md"
+        },
+        {
+          "name": "trie.c"
+        },
+        {
+          "name": "trie.h"
+        }
+      ]
+    },
+    {
+      "name": "whodunit.c"
+    }
+  ]
 }
