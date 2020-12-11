@@ -1,5 +1,4 @@
 <script>
-    import App from './App.svelte';
     import File from './File.svelte';
 
     export let name;
@@ -38,7 +37,7 @@
         padding: 0.2em 0 0 0.5em;
         margin: 0 0 0 0.5em;
         list-style: none;
-        border-left: 1px solid #eee;
+        border-left: 1px solid #1f2938;
     }
 
     li {

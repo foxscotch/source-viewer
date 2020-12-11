@@ -12,15 +12,18 @@
 </script>
 
 <main>
-    <h1>test</h1>
     {#if root}
         <Directory {...root} expanded/>
     {/if}
 </main>
 
 <style>
+	:global(body) {
+		background-color: #0d1117;
+		color: #c9d1d9;
+	}
+	
     main {
-        /* text-align: center; */
         padding: 1em;
         max-width: 240px;
         margin: 0 auto;
