@@ -54,9 +54,9 @@ export default {
 		// https://github.com/rollup/plugins/tree/master/packages/commonjs
 		resolve({
 			browser: true,
-			dedupe: ['svelte']
+			dedupe: ['svelte', 'svelte-fa', '@fortawesome/fontawesome-free']
 		}),
-		commonjs(),
+		commonjs({}),
 
 		// In dev mode, call `npm run start` once
 		// the bundle has been generated

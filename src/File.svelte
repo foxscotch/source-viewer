@@ -1,4 +1,7 @@
 <script>
+    import Fa from 'svelte-fa';
+    import { faCamera } from '@fortawesome/fontawesome-free';
+
     export let name;
 </script>
 
@@ -8,4 +11,4 @@
     }
 </style>
 
-<span>{name}</span>
+<span><Fa icon={faCamera}/>{name}</span>
