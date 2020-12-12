@@ -22,26 +22,28 @@
 
 <style>
     span {
-        padding: 0 0 0 1.5em;
-        background: url(/icons/folder.svg) 0 0.1em no-repeat;
-        background-size: 1em 1em;
+        padding: 0 0 0 0.25em;
+		background-size: 1em 1em;
         font-weight: bold;
         cursor: pointer;
     }
 
-    .expanded {
-        background-image: url(/icons/folder-open.svg);
+    span:before {
+        content: "+ ";
+        left: -5px;
+        color: #ff3e00;
+        font-family: Consolas, monospace;
+    }
+
+    .expanded:before {
+        content: "- ";
     }
 
     ul {
-        padding: 0.2em 0 0 0.5em;
-        margin: 0 0 0 0.5em;
+		padding: 0.2em 0 0 0.5em;
+		margin: 0 0 0 0.5em;
         list-style: none;
         border-left: 1px solid #1f2938;
-    }
-
-    li {
-        padding: 0.2em 0;
     }
 </style>
 

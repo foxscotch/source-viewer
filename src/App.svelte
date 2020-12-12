@@ -7,22 +7,14 @@
     onMount(async () => {
         const res = await fetch('./manifest.json');
         root = await res.json();
-        console.log(root);
     });
 </script>
 
-<main>
-    {#if root}
-        <Directory {...root} expanded/>
-    {/if}
-</main>
+<svelte:head>
+    <link rel="stylesheet" href="global.css">
+</svelte:head>
 
-<style>
-	:global(body) {
-		background-color: #0d1117;
-		color: #c9d1d9;
-	}
-	
+<style>	
     main {
         padding: 1em;
         max-width: 240px;
@@ -41,4 +33,10 @@
         }
     }
 </style>
+
+<main>
+    {#if root}
+        <Directory {...root} expanded/>
+    {/if}
+</main>
 
