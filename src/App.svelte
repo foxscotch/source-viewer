@@ -1,8 +1,9 @@
 <script>
     import { onMount } from 'svelte';
     import Directory from './Directory.svelte';
-    
+
     let root;
+    let test = '<b>test</b>';
 
     onMount(async () => {
         const res = await fetch('./manifest.json');
@@ -11,10 +12,13 @@
 </script>
 
 <svelte:head>
-    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="./global.css">
+    <link rel="stylesheet" href="./highlight/styles/default.css">
+    <script src="./highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </svelte:head>
 
-<style>	
+<style>
     main {
         padding: 1em;
         max-width: 240px;
@@ -35,8 +39,6 @@
 </style>
 
 <main>
-    {#if root}
-        <Directory {...root} expanded/>
-    {/if}
+    <Directory {...root} expanded/>
+    <pre><code class="html">{test}</code></pre>
 </main>
-
