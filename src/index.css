@@ -61,3 +61,55 @@ button:not(:disabled):active {
 button:focus {
 	border-color: #666;
 }
+
+
+/* From App.svelte */
+#root {
+    padding: 1em;
+    max-width: 240px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #ff3e00;
+    font-size: 4em;
+    font-weight: 100;
+}
+
+@media (min-width: 640px) {
+    #root {
+        max-width: none;
+    }
+}
+
+/* From Directory.svelte */
+span.directory {
+    padding: 0 0 0 0.25em;
+    background-size: 1em 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.directory:before {
+    content: "+ ";
+    left: -5px;
+    color: #ff3e00;
+    font-family: Consolas, monospace;
+}
+
+.directory.expanded:before {
+    content: "- ";
+}
+
+ul.directory {
+    padding: 0.2em 0 0 0.5em;
+    margin: 0 0 0 0.5em;
+    list-style: none;
+    border-left: 1px solid #1f2938;
+}
+
+/* From File.svelte */
+span.file {
+    cursor: pointer;
+    padding-left: 0.4em;
+}
