@@ -1,4 +1,5 @@
-import React, { Children } from 'react';
+import { react } from '@babel/types';
+import React from 'react';
 import ReactDOM from 'react-dom';
 
 import './index.css';
@@ -33,7 +34,7 @@ class Directory extends React.Component {
     return this.children.sort(Directory.compare).map(child => {
       if (child.children && child.children.length > 0) {
         return <li><Directory name={child.name} children={child.children} /></li>;
-      } else if (child.children === undefined) {
+      } else {
         return <li><File name={child.name} /></li>;
       }
     });
@@ -49,8 +50,10 @@ class Directory extends React.Component {
   }
 }
 
-function File(props) {
-  return <span class="file">{props.name}</span>
+class File extends React.Component {
+  render() {
+    return <span class="file">{this.props.name}</span>
+  }
 }
 
 fetch('./manifest.json').then(res => res.json().then(data => {
