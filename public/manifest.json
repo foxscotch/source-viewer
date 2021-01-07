@@ -1,274 +1,274 @@
 {
-  "name": "CS50x",
+  "path": "CS50x",
   "children": [
     {
-      "name": "2017",
+      "path": "2017",
       "children": [
         {
-          "name": "caesar.c"
+          "path": "2017/caesar.c"
         },
         {
-          "name": "fifteen.c"
+          "path": "2017/fifteen.c"
         },
         {
-          "name": "find",
+          "path": "2017/find",
           "children": [
             {
-              "name": "find.c"
+              "path": "2017/find/find.c"
             },
             {
-              "name": "generate.c"
+              "path": "2017/find/generate.c"
             },
             {
-              "name": "helpers.c"
+              "path": "2017/find/helpers.c"
             },
             {
-              "name": "helpers.h"
+              "path": "2017/find/helpers.h"
             },
             {
-              "name": "Makefile"
+              "path": "2017/find/Makefile"
             }
           ]
         },
         {
-          "name": "greedy.c"
+          "path": "2017/greedy.c"
         },
         {
-          "name": "hello.c"
+          "path": "2017/hello.c"
         },
         {
-          "name": "initials.c"
+          "path": "2017/initials.c"
         },
         {
-          "name": "mario.c"
+          "path": "2017/mario.c"
         },
         {
-          "name": "vigenere.c"
+          "path": "2017/vigenere.c"
         },
         {
-          "name": "water.c"
+          "path": "2017/water.c"
         }
       ]
     },
     {
-      "name": "cash.c"
+      "path": "cash.c"
     },
     {
-      "name": "finance",
+      "path": "finance",
       "children": [
         {
-          "name": "application.py"
+          "path": "finance/application.py"
         },
         {
-          "name": "db_setup.sql"
+          "path": "finance/db_setup.sql"
         },
         {
-          "name": "finance.db"
+          "path": "finance/finance.db"
         },
         {
-          "name": "helpers.py"
+          "path": "finance/helpers.py"
         },
         {
-          "name": "requirements.txt"
+          "path": "finance/requirements.txt"
         },
         {
-          "name": "static",
+          "path": "finance/static",
           "children": [
             {
-              "name": "styles.css"
+              "path": "finance/static/styles.css"
             }
           ]
         },
         {
-          "name": "templates",
+          "path": "finance/templates",
           "children": [
             {
-              "name": "apology.html"
+              "path": "finance/templates/apology.html"
             },
             {
-              "name": "buy.html"
+              "path": "finance/templates/buy.html"
             },
             {
-              "name": "history.html"
+              "path": "finance/templates/history.html"
             },
             {
-              "name": "index.html"
+              "path": "finance/templates/index.html"
             },
             {
-              "name": "layout.html"
+              "path": "finance/templates/layout.html"
             },
             {
-              "name": "login.html"
+              "path": "finance/templates/login.html"
             },
             {
-              "name": "quote.html"
+              "path": "finance/templates/quote.html"
             },
             {
-              "name": "register.html"
+              "path": "finance/templates/register.html"
             },
             {
-              "name": "sell.html"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "hello.c"
-    },
-    {
-      "name": "license"
-    },
-    {
-      "name": "mario.c"
-    },
-    {
-      "name": "mashup",
-      "children": [
-        {
-          "name": "api_key.txt"
-        },
-        {
-          "name": "application.py"
-        },
-        {
-          "name": "db_setup.sql"
-        },
-        {
-          "name": "helpers.py"
-        },
-        {
-          "name": "mashup.db"
-        },
-        {
-          "name": "readme.txt"
-        },
-        {
-          "name": "requirements.txt"
-        },
-        {
-          "name": "static",
-          "children": [
-            {
-              "name": "ajax-loader.gif"
-            },
-            {
-              "name": "scripts.js"
-            },
-            {
-              "name": "styles.css"
-            }
-          ]
-        },
-        {
-          "name": "templates",
-          "children": [
-            {
-              "name": "index.html"
-            }
-          ]
-        },
-        {
-          "name": "US.txt"
-        }
-      ]
-    },
-    {
-      "name": "readme.md"
-    },
-    {
-      "name": "recover.c"
-    },
-    {
-      "name": "resize.c"
-    },
-    {
-      "name": "sentimental",
-      "children": [
-        {
-          "name": "caesar.py"
-        },
-        {
-          "name": "cash.py"
-        },
-        {
-          "name": "credit.py"
-        },
-        {
-          "name": "hello.py"
-        },
-        {
-          "name": "mario_less.py"
-        },
-        {
-          "name": "mario_more.py"
-        },
-        {
-          "name": "vigenere.py"
-        }
-      ]
-    },
-    {
-      "name": "similarities",
-      "children": [
-        {
-          "name": "helpers.py"
-        },
-        {
-          "name": "requirements.txt"
-        },
-        {
-          "name": "static",
-          "children": [
-            {
-              "name": "styles.css"
-            }
-          ]
-        },
-        {
-          "name": "templates",
-          "children": [
-            {
-              "name": "compare.html"
-            },
-            {
-              "name": "error.html"
-            },
-            {
-              "name": "index.html"
-            },
-            {
-              "name": "layout.html"
+              "path": "finance/templates/sell.html"
             }
           ]
         }
       ]
     },
     {
-      "name": "speller",
+      "path": "hello.c"
+    },
+    {
+      "path": "license"
+    },
+    {
+      "path": "mario.c"
+    },
+    {
+      "path": "mashup",
       "children": [
         {
-          "name": "dictionary.c"
+          "path": "mashup/api_key.txt"
         },
         {
-          "name": "dictionary.h"
+          "path": "mashup/application.py"
         },
         {
-          "name": "Makefile"
+          "path": "mashup/db_setup.sql"
         },
         {
-          "name": "README.md"
+          "path": "mashup/helpers.py"
         },
         {
-          "name": "trie.c"
+          "path": "mashup/mashup.db"
         },
         {
-          "name": "trie.h"
+          "path": "mashup/readme.txt"
+        },
+        {
+          "path": "mashup/requirements.txt"
+        },
+        {
+          "path": "mashup/static",
+          "children": [
+            {
+              "path": "mashup/static/ajax-loader.gif"
+            },
+            {
+              "path": "mashup/static/scripts.js"
+            },
+            {
+              "path": "mashup/static/styles.css"
+            }
+          ]
+        },
+        {
+          "path": "mashup/templates",
+          "children": [
+            {
+              "path": "mashup/templates/index.html"
+            }
+          ]
+        },
+        {
+          "path": "mashup/US.txt"
         }
       ]
     },
     {
-      "name": "whodunit.c"
+      "path": "readme.md"
+    },
+    {
+      "path": "recover.c"
+    },
+    {
+      "path": "resize.c"
+    },
+    {
+      "path": "sentimental",
+      "children": [
+        {
+          "path": "sentimental/caesar.py"
+        },
+        {
+          "path": "sentimental/cash.py"
+        },
+        {
+          "path": "sentimental/credit.py"
+        },
+        {
+          "path": "sentimental/hello.py"
+        },
+        {
+          "path": "sentimental/mario_less.py"
+        },
+        {
+          "path": "sentimental/mario_more.py"
+        },
+        {
+          "path": "sentimental/vigenere.py"
+        }
+      ]
+    },
+    {
+      "path": "similarities",
+      "children": [
+        {
+          "path": "similarities/helpers.py"
+        },
+        {
+          "path": "similarities/requirements.txt"
+        },
+        {
+          "path": "similarities/static",
+          "children": [
+            {
+              "path": "similarities/static/styles.css"
+            }
+          ]
+        },
+        {
+          "path": "similarities/templates",
+          "children": [
+            {
+              "path": "similarities/templates/compare.html"
+            },
+            {
+              "path": "similarities/templates/error.html"
+            },
+            {
+              "path": "similarities/templates/index.html"
+            },
+            {
+              "path": "similarities/templates/layout.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "speller",
+      "children": [
+        {
+          "path": "speller/dictionary.c"
+        },
+        {
+          "path": "speller/dictionary.h"
+        },
+        {
+          "path": "speller/Makefile"
+        },
+        {
+          "path": "speller/README.md"
+        },
+        {
+          "path": "speller/trie.c"
+        },
+        {
+          "path": "speller/trie.h"
+        }
+      ]
+    },
+    {
+      "path": "whodunit.c"
     }
   ]
 }

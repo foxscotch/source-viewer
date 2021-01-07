@@ -2,22 +2,29 @@
 import os
 from pathlib import Path
 
-from anytree import Node
+from anytree import AnyNode
 
 
-def get_dir(main_path, root=None, ignore=True):
+def get_dir(main_path, root=None, ignore=True, original_path=None):
 	main_path = Path(main_path)
 
 	if root is None:
-		root = Node(name=main_path.name)
+		root = AnyNode(path=main_path.name)
+
+	if original_path is None:
+		original_path = main_path
 
 	for path in main_path.iterdir():
 		if path.name.startswith('.') and ignore:
 			continue
 
-		child = Node(name=path.name, parent=root)
+		child = AnyNode(
+			path=str(path.relative_to(original_path)).replace('\\', '/'),
+			parent=root
+		)
+
 		if path.is_dir():
-			get_dir(path, child, ignore)
+			get_dir(path, child, ignore, original_path)
 
 	return root
 
