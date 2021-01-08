@@ -63,9 +63,6 @@
           "path": "finance/db_setup.sql"
         },
         {
-          "path": "finance/finance.db"
-        },
-        {
           "path": "finance/helpers.py"
         },
         {
@@ -138,9 +135,6 @@
           "path": "mashup/helpers.py"
         },
         {
-          "path": "mashup/mashup.db"
-        },
-        {
           "path": "mashup/readme.txt"
         },
         {
@@ -149,9 +143,6 @@
         {
           "path": "mashup/static",
           "children": [
-            {
-              "path": "mashup/static/ajax-loader.gif"
-            },
             {
               "path": "mashup/static/scripts.js"
             },
