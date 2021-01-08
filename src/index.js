@@ -1,4 +1,3 @@
-import { react } from '@babel/types';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -18,6 +17,11 @@ class App extends React.Component {
   }
 
   changeFile(path) {
+    this.setState({
+      currentTitle: null,
+      currentText: 'empty'
+    });
+
     fetch(this.sourceRoot + path).then(res => {
       res.text().then(text => {
         this.setState({
@@ -30,14 +34,14 @@ class App extends React.Component {
 
   render() {
     return (
-      <div class="app">
-        <div class="files">
+      <div className="app">
+        <div className="files">
           <h1>source-viewer</h1>
           <Directory path={this.props.data.path} children={this.props.data.children} changeFunc={this.changeFile.bind(this)} />
         </div>
-        <div class="code">
+        <div className="code">
           {this.state.currentTitle === null
-            ? <h2>Open a file!</h2>
+            ? <h2>{this.state.currentText === null ? "Open a file!" : "Loading..."}</h2>
             : <Code title={this.state.currentTitle} text={this.state.currentText} />}
         </div>
       </div>
@@ -90,12 +94,12 @@ class Directory extends React.Component {
     if (this.state.expanded) {
       return (
         <React.Fragment>
-          <span class="directory expanded" data-path={this.path} onClick={this.toggle}>{this.name}</span>
-          <ul class="directory">{this.getChildElements()}</ul>
+          <span className="directory expanded" data-path={this.path} onClick={this.toggle}>{this.name}</span>
+          <ul className="directory">{this.getChildElements()}</ul>
         </React.Fragment>
       );
     } else {
-      return <span class="directory" data-path={this.path} onClick={this.toggle}>{this.name}</span>
+      return <span className="directory" data-path={this.path} onClick={this.toggle}>{this.name}</span>
     }
   }
 }
@@ -114,7 +118,7 @@ class File extends React.Component {
   }
 
   render() {
-    return <span class="file" data-path={this.path} onClick={this.changeFunc.bind(undefined, this.path)}>{this.name}</span>
+    return <span className="file" data-path={this.path} onClick={this.changeFunc.bind(undefined, this.path)}>{this.name}</span>
   }
 }
 
