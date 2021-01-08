@@ -5,7 +5,7 @@ import './index.css';
 
 
 class App extends React.Component {
-  sourceRoot = '/src/';
+  sourceRoot = './src/';
 
   constructor(props) {
     super(props);
