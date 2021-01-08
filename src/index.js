@@ -6,14 +6,39 @@ import './index.css';
 
 
 class App extends React.Component {
+  sourceRoot = '/src/';
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      currentTitle: null,
+      currentText: null
+    };
+  }
+
+  changeFile(path) {
+    fetch(this.sourceRoot + path).then(res => {
+      res.text().then(text => {
+        this.setState({
+          currentTitle: path,
+          currentText: text
+        });
+      });
+    });
+  }
+
   render() {
     return (
       <div class="app">
         <div class="files">
-          <Directory path={this.props.data.path} children={this.props.data.children} />
+          <h1>source-viewer</h1>
+          <Directory path={this.props.data.path} children={this.props.data.children} changeFunc={this.changeFile.bind(this)} />
         </div>
         <div class="code">
-          <pre><code>print("hello!")</code></pre>
+          {this.state.currentTitle === null
+            ? <h2>Open a file!</h2>
+            : <Code title={this.state.currentTitle} text={this.state.currentText} />}
         </div>
       </div>
     );
@@ -28,6 +53,7 @@ class Directory extends React.Component {
     this.path = props.path;
     this.parent = this.props.parent || null;
     this.children = props.children;
+    this.changeFunc = props.changeFunc;
     this.state = { expanded: false };
 
     const split = this.path.split('/');
@@ -53,9 +79,9 @@ class Directory extends React.Component {
   getChildElements() {
     return this.children.sort(Directory.compare).map(child => {
       if (child.children && child.children.length > 0) {
-        return <li><Directory path={child.path} children={child.children} parent={this} /></li>;
+        return <li key={child.path}><Directory path={child.path} children={child.children} parent={this} changeFunc={this.changeFunc} /></li>;
       } else {
-        return <li><File path={child.path} parent={this} /></li>;
+        return <li key={child.path}><File path={child.path} parent={this} changeFunc={this.changeFunc} /></li>;
       }
     });
   }
@@ -74,21 +100,49 @@ class Directory extends React.Component {
   }
 }
 
+
 class File extends React.Component {
   constructor(props) {
     super(props);
 
     this.path = props.path;
     this.parent = this.props.parent;
+    this.changeFunc = props.changeFunc;
 
     const split = this.path.split('/');
     this.name = split[split.length - 1];
   }
 
   render() {
-    return <span class="file" data-path={this.path}>{this.name}</span>
+    return <span class="file" data-path={this.path} onClick={this.changeFunc.bind(undefined, this.path)}>{this.name}</span>
   }
 }
+
+
+class Code extends React.Component {
+  constructor(props) {
+    super(props);
+    this.element = React.createRef();
+  }
+
+  componentDidMount() {
+    window.hljs.highlightBlock(this.element.current);
+  }
+
+  componentDidUpdate() {
+    window.hljs.highlightBlock(this.element.current);
+  }
+
+  render() {
+    return (
+      <React.Fragment>
+        <h2>{this.props.title}</h2>
+        <pre><code ref={this.element}>{this.props.text}</code></pre>
+      </React.Fragment>
+    );
+  }
+}
+
 
 fetch('./manifest.json').then(res => res.json().then(data => {
   ReactDOM.render(
