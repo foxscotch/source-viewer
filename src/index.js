@@ -41,7 +41,7 @@ class App extends React.Component {
         </div>
         <div className="code">
           {this.state.currentTitle === null
-            ? <h2>{this.state.currentText === null ? "Open a file!" : "Loading..."}</h2>
+            ? <h2>{this.state.currentText === null ? "Click a file on the left!" : "Loading..."}</h2>
             : <Code title={this.state.currentTitle} text={this.state.currentText} />}
         </div>
       </div>
